@@ -1,0 +1,7 @@
+.gallery-img {
+    max-width: 100%;
+    height: auto;
+    width: 200px; /* Adjust this value to control the image size */
+    display: block;
+    margin: 0 auto; /* Centers the image within its column */
+}

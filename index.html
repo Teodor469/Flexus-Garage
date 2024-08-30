@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Detailing Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .hero {
+            background-image: url('https://example.com/car-detailing.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .services img {
+            width: 100%;
+            height: auto;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .gallery-bg {
+            background-image: url('https://lirp.cdn-website.com/eaeb2c75/dms3rep/multi/opt/screen-shot-2020-12-07-at-9-00-44-am-640w.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 60px 0;
+        }
+        /* Animation */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100vw);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .animate-lambo {
+            animation: slideIn 1s ease-out forwards;
+        }
+        /* Style for horizontal scrolling */
+        .scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+        .scroll-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for WebKit browsers */
+        }
+        .scroll-container .scroll-content {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+        .scroll-container .scroll-content img {
+            max-height: 300px; /* Adjust to fit your design */
+            width: 100%; /* Ensure image takes full width of container */
+            object-fit: cover;
+            flex: 0 0 auto;
+        }
+        .scroll-container .scroll-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 100;
+        }
+        .scroll-container .scroll-control-left {
+            left: 300px;
+        }
+        .scroll-container .scroll-control-right {
+            right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Car Detailing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Our Car Detailing Service!</h1>
+        <p>Making Your Car Shine Like New</p>
+        <a href="#contact" class="btn btn-primary btn-lg">Book Now</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services py-5 mb-1">
+        <div class="container">
+            <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/model_choose/2023/huracan_sterrato_m.png" alt="Lamborghini" class="animate-lambo">
+            <h2 class="text-center">Our Services</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center">
+                    <h3>Exterior Detailing</h3>
+                    <p>Complete cleaning and polishing of the car's exterior.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Interior Detailing</h3>
+                    <p>Deep cleaning of car interiors, including vacuuming, polishing, and sanitizing.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Full Service Detailing</h3>
+                    <p>The best of both worlds: complete interior and exterior detailing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Section Above "Our Work" -->
+    <section class="background-section py-5">
+        <div class="container"></div>
+    </section>
+
+    <!-- Gallery Section with Horizontal Scrolling -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Our Work</h2>
+            <!-- Grid Container -->
+            <div class="row gallery">
+                <div class="col-md-4 mb-4">
+                    <img src="https://detailxperts.com/wp-content/uploads/2017/07/Exterior-Car-Detailing-Everything-You-Need-to-Know.jpg" alt="Car Detailing Work 1" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://detailxperts.com/wp-content/uploads/2017/07/Exterior-Car-Detailing-Everything-You-Need-to-Know.jpg" alt="Car Detailing Work 2" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://detailxperts.com/wp-content/uploads/2017/07/Exterior-Car-Detailing-Everything-You-Need-to-Know.jpg" alt="Car Detailing Work 3" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.redd.it/hwnfunbi2bv21.jpg" alt="Car Detailing Work 4" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.redd.it/hwnfunbi2bv21.jpg" alt="Car Detailing Work 5" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.redd.it/hwnfunbi2bv21.jpg" alt="Car Detailing Work 6" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://detailxperts.com/wp-content/uploads/2017/07/Exterior-Car-Detailing-Everything-You-Need-to-Know.jpg" alt="Car Detailing Work 1" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://detailxperts.com/wp-content/uploads/2017/07/Exterior-Car-Detailing-Everything-You-Need-to-Know.jpg" alt="Car Detailing Work 1" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://detailxperts.com/wp-content/uploads/2017/07/Exterior-Car-Detailing-Everything-You-Need-to-Know.jpg" alt="Car Detailing Work 1" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.redd.it/hwnfunbi2bv21.jpg" alt="Car Detailing Work 4" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.redd.it/hwnfunbi2bv21.jpg" alt="Car Detailing Work 5" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.redd.it/hwnfunbi2bv21.jpg" alt="Car Detailing Work 6" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <form>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Car Detailing. All rights reserved.</p>
+        <a href="#" class="text-light">Facebook</a> | <a href="#" class="text-light">Instagram</a> | <a href="#" class="text-light">Twitter</a>
+    </footer>
+</body>
+</html>
