@@ -1,6 +1,3 @@
-
-
-// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault(); // Prevent the default anchor behavior
@@ -14,7 +11,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Handle form submission
 document.getElementById('contact-us-form').addEventListener('submit', function(event) {
-    // Prevent the default form submission
     event.preventDefault();
     
     // Get the email and message input elements
@@ -25,4 +21,19 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
     const email = emailInput.value;
     const message = messageInput.value;
     this.submit();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navbar items
+    const navItems = document.querySelectorAll('.navbar-item');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove active class from all items
+            navItems.forEach(nav => nav.classList.remove('active'));
+            
+            // Add active class to the clicked item
+            this.classList.add('active');
+        });
+    });
 });
