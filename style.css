@@ -5,3 +5,82 @@
     display: block;
     margin: 0 auto; /* Centers the image within its column */
 }
+.hero {
+    background-image: url('https://example.com/car-detailing.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.services img {
+    width: 100%;
+    height: auto;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.gallery-bg {
+    background-image: url('https://lirp.cdn-website.com/eaeb2c75/dms3rep/multi/opt/screen-shot-2020-12-07-at-9-00-44-am-640w.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+}
+/* Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.animate-lambo {
+    animation: slideIn 1s ease-out forwards;
+}
+/* Style for horizontal scrolling */
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+.scroll-container .scroll-content {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+.scroll-container .scroll-content img {
+    max-height: 300px; /* Adjust to fit your design */
+    width: 100%; /* Ensure image takes full width of container */
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+.scroll-container .scroll-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+}
+.scroll-container .scroll-control-left {
+    left: 300px;
+}
+.scroll-container .scroll-control-right {
+    right: 300px;
+}
