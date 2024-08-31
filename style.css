@@ -5,14 +5,14 @@
     display: block;
     margin: 0 auto; /* Centers the image within its column */
 }
-.hero {
+.welcome {
     background-image: url('https://example.com/car-detailing.jpg'); /* Replace with your image URL */
     background-size: cover;
     color: white;
     padding: 100px 0;
     text-align: center;
 }
-.hero h1 {
+.welcome h1 {
     font-size: 3rem;
     font-weight: bold;
 }
@@ -35,6 +35,7 @@
 }
 /* Animation */
 @keyframes slideIn {
+    /* Here is the animation that makes the lambo go in and out */
     from {
         transform: translateX(100vw);
         opacity: 0;
@@ -84,3 +85,84 @@
 .scroll-container .scroll-control-right {
     right: 300px;
 }
+/* Custom Navbar Styles */
+.custom-navbar {
+    display: flex;
+    background-color: black;
+    padding: 10px;
+    align-items: center; /* Center items vertically within the navbar */
+}
+
+/* Logo Styles */
+.logo {
+    height: 120px;
+    margin-left:  185px;
+}
+
+/* Container to center items horizontally */
+.navbar-content {
+    display: flex;
+    justify-content: center; /* Center items horizontally within the container */
+    flex-grow: 1; /* Allow the container to grow and take up remaining space */
+}
+
+/* Navbar Item Styles */
+.navbar-item {
+    background-color: #FFB600; /* Yellow background */
+    margin: 0 5px; /* Slight space between items */
+    padding: 2px 16px; /* Adjust padding to squish the height */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Pointer cursor for clickable area */
+    line-height: 1.2; /* Adjust line height for vertical centering */
+}
+
+.navbar-item a {
+    display: block; /* Ensure the link fills the entire div */
+    width: 100%;
+    height: 100%;
+    color: black; /* Normal text color */
+    text-decoration: none; /* Remove default link styling */
+    font-family: "Montserrat", Sans-serif;
+    font-size: 16px; /* Adjust font size */
+    font-weight: 400; /* Regular weight for normal text */
+    text-transform: none; /* No text transformation */
+    text-align: center; /* Center text within the link */
+    line-height: 1.5; /* Center text vertically */
+}
+/* Active Navbar Item Styles */
+.navbar-item.active {
+    background-color: white; /* White background for the active item */
+    color: black; /* Black text color for better visibility on white background */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-content {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .navbar-item {
+        width: 100%; /* Full width for each item on small screens */
+        margin: 5px 0; /* Vertical margin for stacked items */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .navbar-item a {
+        font-size: 18px; /* Slightly larger font size on mobile */
+    }
+
+    .logo {
+        margin-right: 10px; /* Adjust spacing for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-item a {
+        font-size: 16px; /* Adjust font size for very small screens */
+    }
+}
+
+
+

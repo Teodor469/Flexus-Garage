@@ -12,31 +12,45 @@
 </head>
 <body>
     <!-- Header -->
+
+    <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Car Detailing</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+        <div class="container">
+            <!-- Logo Section -->
+            <a class="navbar-brand" href="#welcome">
+                <img src="Logo.jpeg" alt="Logo" class="logo">
+            </a>
+
+            <!-- Navbar Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-content">
+                    <div class="navbar-item">
+                        <a class="navbar-link" href="#welcome">Начало</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="navbar-link" href="#services">Услуги</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="navbar-link" href="#prices">Цени</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="navbar-link" href="#gallery">Галерия</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="navbar-link" href="#contact">Контакти</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Welcome Section -->
+    <section id="welcome" class="welcome">
         <h1>Welcome to Our Car Detailing Service!</h1>
         <p>Making Your Car Shine Like New</p>
         <a href="#contact" class="btn btn-primary btn-lg">Book Now</a>
@@ -118,17 +132,17 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center">Contact Us</h2>
-            <form id="contact-us-form" action="https://formsubmit.co/ant.kovachev@gmail.com" method="POST">
+            <h2 class="text-center">Свържете се с нас</h2>
+            <form id="contact-us-form" action="https://formsubmit.co/v.alexandrovbg@abv.bg" method="POST">
                 <div class="form-group">
-                    <label for="email-input">Email address</label>
+                    <label for="email-input">Имейл</label>
                     <input type="email" class="form-control" id="email-input" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="name">Message</label>
+                    <label for="name">Съобщение</label>
                     <textarea class="form-control" id="name" name="message" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Изпрати</button>
             </form>
         </div>
     </section>
